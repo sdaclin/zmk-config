@@ -1,219 +1,549 @@
 /*
+ * Localized Keys for French (AFNOR NF Z71-300)
+ *
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
+ *
+ * Generated from the QMK French AFNOR keycode definitions.
+ * Layout: NF Z71-300:2019 (AZERTY amélioré)
  */
+
 #pragma once
 
 #include <dt-bindings/zmk/hid_usage.h>
 #include <dt-bindings/zmk/hid_usage_pages.h>
 #include <dt-bindings/zmk/modifiers.h>
-#include <dt-bindings/zmk/keys.h>
 
-/*
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ @ │ à │ é │ è │ ê │ ( │ ) │ ' │ ' │ « │ » │ ' │ ^ │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │ A │ Z │ E │ R │ T │ Y │ U │ I │ O │ P │ - │ + │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │ Q │ S │ D │ F │ G │ H │ J │ K │ L │ M │ / │ * │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ < │ W │ X │ C │ V │ B │ N │ . │ , │ : │ ; │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-#define FR_AT   GRAVE // @
-#define FR_AGRV N1    // à
-#define FR_EACU N2    // é
-#define FR_EGRV N3    // è
-#define FR_ECIR N4    // ê
-#define FR_LPRN N5    // (
-#define FR_RPRN N6    // )
-#define FR_LSQU N7    // '
-#define FR_RSQU N8    // '
-#define FR_LDAQ N9    // «
-#define FR_RDAQ N0    // »
-#define FR_QUOT MINUS // '
-#define FR_DCIR EQUAL // ^ (dead)
-// Row 2
-#define FR_A    Q    // A
-#define FR_Z    W    // Z
-#define FR_E    E    // E
-#define FR_R    R    // R
-#define FR_T    T    // T
-#define FR_Y    Y    // Y
-#define FR_U    U    // U
-#define FR_I    I    // I
-#define FR_O    O    // O
-#define FR_P    P    // P
-#define FR_MINS LBKT // -
-#define FR_PLUS RBKT // +
-// Row 3
-#define FR_Q    A    // Q
-#define FR_S    S    // S
-#define FR_D    D    // D
-#define FR_F    F    // F
-#define FR_G    G    // G
-#define FR_H    H    // H
-#define FR_J    J    // J
-#define FR_K    K    // K
-#define FR_L    L    // L
-#define FR_M    SEMI // M
-#define FR_SLSH SQT  // /
-#define FR_ASTR NUHS // *
-// Row 4
-#define FR_LABK NUBS  // <
-#define FR_W    Z     // W
-#define FR_X    X     // X
-#define FR_C    C     // C
-#define FR_V    V     // V
-#define FR_B    B     // B
-#define FR_N    N     // N
-#define FR_DOT  M     // .
-#define FR_COMM COMMA // ,
-#define FR_COLN DOT   // :
-#define FR_SCLN FSLH  // ;
+/* ! */
+#define FR_EXCLAMATION (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN)))
+#define FR_EXCL (FR_EXCLAMATION)
+#define FR_EXLM (FR_EXCLAMATION)
 
-/* Shifted symbols
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ # │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ " │ ¨ │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │   │   │   │   │   │   │   │   │   │   │ – │ ± │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │   │   │   │   │   │   │   │   │   │   │ \ │ ½ │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ > │   │   │   │   │   │   │ ? │ ! │ … │ = │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-#define FR_HASH LS(FR_AT)   // #
-#define FR_1    LS(FR_AGRV) // 1
-#define FR_2    LS(FR_EACU) // 2
-#define FR_3    LS(FR_EGRV) // 3
-#define FR_4    LS(FR_ECIR) // 4
-#define FR_5    LS(FR_LPRN) // 5
-#define FR_6    LS(FR_RPRN) // 6
-#define FR_7    LS(FR_LSQU) // 7
-#define FR_8    LS(FR_RSQU) // 8
-#define FR_9    LS(FR_LDAQ) // 9
-#define FR_0    LS(FR_RDAQ) // 0
-#define FR_DQUO LS(FR_QUOT) // "
-#define FR_DIAE LS(FR_DCIR) // ¨ (dead)
-// Row 2
-#define FR_NDSH LS(FR_MINS) // –
-#define FR_PLMN LS(FR_PLUS) // ±
-// Row 3
-#define FR_BSLS LS(FR_SLSH) // (backslash)
-#define FR_HALF LS(FR_ASTR) // ½
-// Row 4
-#define FR_RABK LS(FR_LABK) // >
-#define FR_QUES LS(FR_DOT)  // ?
-#define FR_EXLM LS(FR_COMM) // !
-#define FR_ELLP LS(FR_COLN) // …
-#define FR_EQL  LS(FR_SCLN) // =
+/* " */
+#define FR_DOUBLE_QUOTES (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE)))
+#define FR_DQT (FR_DOUBLE_QUOTES)
+#define FR_DQUO (FR_DOUBLE_QUOTES)
 
-/* AltGr symbols
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ ˘ │ § │ ´ │ ` │ & │ [ │ ] │ ¯ │ _ │ " │ " │ ° │ ˇ │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │ æ │ £ │ € │ ® │ { │ } │ ù │ ˙ │ œ │ % │ − │ † │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │ θ │ ß │ $ │ ¤ │ µ │ Eu│   │ ∕ │ | │ ∞ │ ÷ │ × │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ ≤ │ ʒ │ © │ ç │ ¸ │ − │ ~ │ ¿ │ ¡ │ · │ ≃ │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-#define FR_BREV RA(FR_AT)   // ˘ (dead)
-#define FR_SECT RA(FR_AGRV) // §
-#define FR_ACUT RA(FR_EACU) // ´ (dead)
-#define FR_GRV  RA(FR_EGRV) // ` (dead)
-#define FR_AMPR RA(FR_ECIR) // &
-#define FR_LBRC RA(FR_LPRN) // [
-#define FR_RBRC RA(FR_RPRN) // ]
-#define FR_MACR RA(FR_LSQU) // ¯ (dead)
-#define FR_UNDS RA(FR_RSQU) // _
-#define FR_LDQU RA(FR_LDAQ) // "
-#define FR_RDQU RA(FR_RDAQ) // "
-#define FR_DEG  RA(FR_QUOT) // °
-#define FR_CARN RA(FR_DCIR) // ˇ (dead)
-// Row 2
-#define FR_AE   RA(FR_A)    // æ
-#define FR_PND  RA(FR_Z)    // £
-#define FR_EURO RA(FR_E)    // €
-#define FR_REGD RA(FR_R)    // ®
-#define FR_LCBR RA(FR_T)    // {
-#define FR_RCBR RA(FR_Y)    // }
-#define FR_UGRV RA(FR_U)    // ù
-#define FR_DOTA RA(FR_I)    // ˙ (dead)
-#define FR_OE   RA(FR_O)    // œ
-#define FR_PERC RA(FR_P)    // %
-#define FR_MMNS RA(FR_MINS) // −
-#define FR_DAGG RA(FR_PLUS) // †
-// Row 3
-#define FR_THET RA(FR_Q)    // θ
-#define FR_SS   RA(FR_S)    // ß
-#define FR_DLR  RA(FR_D)    // $
-#define FR_CURR RA(FR_F)    // ¤ (dead monetary key)
-#define FR_DGRK RA(FR_G)    // µ (dead Greek key)
-#define FR_EU   RA(FR_H)    // Eu (dead European symbol key)
-#define FR_DSLS RA(FR_K)    // ∕ (dead)
-#define FR_PIPE RA(FR_L)    // |
-#define FR_INFN RA(FR_M)    // ∞
-#define FR_DIV  RA(FR_SLSH) // ÷
-#define FR_MUL  RA(FR_ASTR) // ×
-// Row 4
-#define FR_LEQL RA(FR_LABK) // ≤
-#define FR_EZH  RA(FR_W)    // ʒ
-#define FR_COPY RA(FR_X)    // ©
-#define FR_CCED RA(FR_C)    // ç
-#define FR_CEDL RA(FR_V)    // ¸ (dead)
-#define FR_DMNS RA(FR_B)    // − (dead)
-#define FR_DTIL RA(FR_N)    // ~ (dead)
-#define FR_IQUE RA(FR_DOT)  // ¿
-#define FR_IEXL RA(FR_COMM) // ¡
-#define FR_MDDT RA(FR_COLN) // ·
-#define FR_AEQL RA(FR_SCLN) // ≃
+/* # */
+#define FR_HASH (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE)))
 
-/* Shift+AltGr symbols
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ ̑  │   │   │   │   │ ˝ │ ̏  │   │ — │ ‹ │ › │ ˚ │   │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │   │   │   │   │ ™ │   │   │ ̣  │   │ ‰ │ ‑ │ ‡ │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │   │   │   │   │   │ ˍ │   │   │   │   │ √ │ ¼ │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ ≥ │   │   │   │ ˛ │   │   │   │ ̦  │   │ ≠ │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-#define FR_IBRV LS(RA(FR_AT))   // ̑ (dead)
-#define FR_DACU LS(RA(FR_LPRN)) // ˝ (dead)
-#define FR_DGRV LS(RA(FR_RPRN)) // ̏ (dead)
-#define FR_MDSH LS(RA(FR_RSQU)) // —
-#define FR_LSAQ LS(RA(FR_LDAQ)) // ‹
-#define FR_RSAQ LS(RA(FR_RDAQ)) // ›
-#define FR_RNGA LS(RA(FR_QUOT)) // ˚ (dead)
-// Row 2
-#define FR_TM   LS(RA(FR_T))    // ™
-#define FR_DOTB LS(RA(FR_I))    // ̣ (dead)
-#define FR_PERM LS(RA(FR_P))    // ‰
-#define FR_NBHY LS(RA(FR_MINS)) // ‑ (non-breaking hyphen)
-#define FR_DDAG LS(RA(FR_PLUS)) // ‡
-// Row 3
-#define FR_MACB LS(RA(FR_H))    // ˍ (dead)
-#define FR_SQRT LS(RA(FR_SLSH)) // √
-#define FR_QRTR LS(RA(FR_ASTR)) // ¼
-// Row 4
-#define FR_GEQL LS(RA(FR_LABK)) // ≥
-#define FR_OGON LS(RA(FR_V))    // ˛ (dead)
-#define FR_DCMM LS(RA(FR_COMM)) // ̦ (dead)
-#define FR_NEQL LS(RA(FR_SCLN)) // ≠
+/* $ */
+#define FR_DOLLAR (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_D)))
+#define FR_DLLR (FR_DOLLAR)
+#define FR_DLR (FR_DOLLAR)
+
+/* % */
+#define FR_PERCENT (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_P)))
+#define FR_PRCNT (FR_PERCENT)
+#define FR_PERC (FR_PERCENT)
+
+/* & */
+#define FR_AMPERSAND (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_4_AND_DOLLAR)))
+#define FR_AMPS (FR_AMPERSAND)
+#define FR_AMPR (FR_AMPERSAND)
+
+/* ' */
+#define FR_SINGLE_QUOTE (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE))
+#define FR_SQT (FR_SINGLE_QUOTE)
+#define FR_APOSTROPHE (FR_SINGLE_QUOTE)
+#define FR_APOS (FR_SINGLE_QUOTE)
+#define FR_QUOT (FR_SINGLE_QUOTE)
+
+/* ( */
+#define FR_LEFT_PARENTHESIS (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT))
+#define FR_LPAR (FR_LEFT_PARENTHESIS)
+#define FR_LPRN (FR_LEFT_PARENTHESIS)
+
+/* ) */
+#define FR_RIGHT_PARENTHESIS (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_6_AND_CARET))
+#define FR_RPAR (FR_RIGHT_PARENTHESIS)
+#define FR_RPRN (FR_RIGHT_PARENTHESIS)
+
+/* * */
+#define FR_ASTERISK (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_HASH_AND_TILDE))
+#define FR_ASTRK (FR_ASTERISK)
+#define FR_STAR (FR_ASTERISK)
+#define FR_ASTR (FR_ASTERISK)
+
+/* + */
+#define FR_PLUS (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))
+
+/* , */
+#define FR_COMMA (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))
+#define FR_COMM (FR_COMMA)
+
+/* - */
+#define FR_MINUS (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE))
+#define FR_MINS (FR_MINUS)
+
+/* . */
+#define FR_PERIOD (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_M))
+#define FR_DOT (FR_PERIOD)
+
+/* / */
+#define FR_SLASH (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE))
+#define FR_FSLH (FR_SLASH)
+#define FR_SLSH (FR_SLASH)
+
+/* 0 */
+#define FR_N0 (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))
+#define FR_0 (FR_N0)
+
+/* 1 */
+#define FR_N1 (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION)))
+#define FR_1 (FR_N1)
+
+/* 2 */
+#define FR_N2 (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT)))
+#define FR_2 (FR_N2)
+
+/* 3 */
+#define FR_N3 (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_3_AND_HASH)))
+#define FR_3 (FR_N3)
+
+/* 4 */
+#define FR_N4 (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_4_AND_DOLLAR)))
+#define FR_4 (FR_N4)
+
+/* 5 */
+#define FR_N5 (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT)))
+#define FR_5 (FR_N5)
+
+/* 6 */
+#define FR_N6 (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_6_AND_CARET)))
+#define FR_6 (FR_N6)
+
+/* 7 */
+#define FR_N7 (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))
+#define FR_7 (FR_N7)
+
+/* 8 */
+#define FR_N8 (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK)))
+#define FR_8 (FR_N8)
+
+/* 9 */
+#define FR_N9 (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))
+#define FR_9 (FR_N9)
+
+/* : */
+#define FR_COLON (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN))
+#define FR_COLN (FR_COLON)
+
+/* ; */
+#define FR_SEMICOLON (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK))
+#define FR_SEMI (FR_SEMICOLON)
+#define FR_SCLN (FR_SEMICOLON)
+
+/* < */
+#define FR_LESS_THAN (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))
+#define FR_LT (FR_LESS_THAN)
+#define FR_LABK (FR_LESS_THAN)
+
+/* = */
+#define FR_EQUAL (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK)))
+#define FR_EQL (FR_EQUAL)
+
+/* > */
+#define FR_GREATER_THAN (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))
+#define FR_GT (FR_GREATER_THAN)
+#define FR_RABK (FR_GREATER_THAN)
+
+/* ? */
+#define FR_QUESTION (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_M)))
+#define FR_QMARK (FR_QUESTION)
+#define FR_QUES (FR_QUESTION)
+
+/* @ */
+#define FR_AT_SIGN (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE))
+#define FR_AT (FR_AT_SIGN)
+
+/* a */
+#define FR_A (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q))
+
+/* b */
+#define FR_B (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_B))
+
+/* c */
+#define FR_C (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_C))
+
+/* d */
+#define FR_D (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_D))
+
+/* e */
+#define FR_E (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_E))
+
+/* f */
+#define FR_F (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_F))
+
+/* g */
+#define FR_G (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_G))
+
+/* h */
+#define FR_H (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_H))
+
+/* i */
+#define FR_I (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_I))
+
+/* j */
+#define FR_J (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_J))
+
+/* k */
+#define FR_K (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_K))
+
+/* l */
+#define FR_L (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_L))
+
+/* m */
+#define FR_M (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON))
+
+/* n */
+#define FR_N (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_N))
+
+/* o */
+#define FR_O (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_O))
+
+/* p */
+#define FR_P (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_P))
+
+/* q */
+#define FR_Q (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_A))
+
+/* r */
+#define FR_R (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_R))
+
+/* s */
+#define FR_S (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_S))
+
+/* t */
+#define FR_T (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_T))
+
+/* u */
+#define FR_U (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_U))
+
+/* v */
+#define FR_V (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_V))
+
+/* w */
+#define FR_W (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Z))
+
+/* x */
+#define FR_X (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_X))
+
+/* y */
+#define FR_Y (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Y))
+
+/* z */
+#define FR_Z (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_W))
+
+/* [ */
+#define FR_LEFT_BRACKET (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT)))
+#define FR_LBKT (FR_LEFT_BRACKET)
+#define FR_LBRC (FR_LEFT_BRACKET)
+
+/* \ */
+#define FR_BACKSLASH (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE)))
+#define FR_BSLH (FR_BACKSLASH)
+#define FR_BSLS (FR_BACKSLASH)
+
+/* ] */
+#define FR_RIGHT_BRACKET (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_6_AND_CARET)))
+#define FR_RBKT (FR_RIGHT_BRACKET)
+#define FR_RBRC (FR_RIGHT_BRACKET)
+
+/* ^ (dead) */
+#define FR_CARET (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_EQUAL_AND_PLUS))
+#define FR_DCIR (FR_CARET)
+
+/* _ */
+#define FR_UNDERSCORE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK)))
+#define FR_UNDER (FR_UNDERSCORE)
+#define FR_UNDS (FR_UNDERSCORE)
+
+/* ` (dead) */
+#define FR_GRAVE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_3_AND_HASH)))
+#define FR_GRV (FR_GRAVE)
+
+/* { */
+#define FR_LEFT_BRACE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_T)))
+#define FR_LCBR (FR_LEFT_BRACE)
+
+/* | */
+#define FR_PIPE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_L)))
+
+/* } */
+#define FR_RIGHT_BRACE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Y)))
+#define FR_RCBR (FR_RIGHT_BRACE)
+
+/* ~ (dead) */
+#define FR_TILDE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_N)))
+#define FR_DTIL (FR_TILDE)
+
+/* ¡ */
+#define FR_INVERTED_EXCLAMATION (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN)))
+#define FR_IEXL (FR_INVERTED_EXCLAMATION)
+
+/* £ */
+#define FR_POUND_SIGN (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_W)))
+#define FR_PND (FR_POUND_SIGN)
+
+/* ¤ (dead monetary) */
+#define FR_CURRENCY_SIGN (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_F)))
+#define FR_CURREN (FR_CURRENCY_SIGN)
+#define FR_CURR (FR_CURRENCY_SIGN)
+
+/* § */
+#define FR_SECTION (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION)))
+#define FR_SECT (FR_SECTION)
+
+/* ¨ (dead) */
+#define FR_UMLAUT (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_EQUAL_AND_PLUS)))
+#define FR_DIAE (FR_UMLAUT)
+
+/* © */
+#define FR_COPYRIGHT (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_X)))
+#define FR_COPY (FR_COPYRIGHT)
+
+/* « */
+#define FR_LEFT_GUILLEMET (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS))
+#define FR_LDAQ (FR_LEFT_GUILLEMET)
+
+/* ® */
+#define FR_REGISTERED (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_R)))
+#define FR_REGD (FR_REGISTERED)
+
+/* ¯ (dead) */
+#define FR_MACRON (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))
+#define FR_MACR (FR_MACRON)
+
+/* ° */
+#define FR_DEGREE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE)))
+#define FR_DEG (FR_DEGREE)
+
+/* ± */
+#define FR_PLUS_MINUS (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE)))
+#define FR_PLMN (FR_PLUS_MINUS)
+
+/* ´ (dead) */
+#define FR_ACUTE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT)))
+#define FR_ACUT (FR_ACUTE)
+
+/* µ (dead Greek) */
+#define FR_MU (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_G)))
+#define FR_DGRK (FR_MU)
+
+/* · */
+#define FR_MIDDLE_DOT (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))
+#define FR_MDDT (FR_MIDDLE_DOT)
+
+/* ¸ (dead) */
+#define FR_CEDILLA (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_V)))
+#define FR_CEDL (FR_CEDILLA)
+
+/* » */
+#define FR_RIGHT_GUILLEMET (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS))
+#define FR_RDAQ (FR_RIGHT_GUILLEMET)
+
+/* ¼ */
+#define FR_ONE_QUARTER (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_HASH_AND_TILDE))))
+#define FR_QRTR (FR_ONE_QUARTER)
+
+/* ½ */
+#define FR_ONE_HALF (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_HASH_AND_TILDE)))
+#define FR_HALF (FR_ONE_HALF)
+
+/* ¿ */
+#define FR_INVERTED_QUESTION (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_M)))
+#define FR_IQUE (FR_INVERTED_QUESTION)
+
+/* × */
+#define FR_MULTIPLICATION (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_HASH_AND_TILDE)))
+#define FR_MUL (FR_MULTIPLICATION)
+
+/* ß */
+#define FR_SHARP_S (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_S)))
+#define FR_SS (FR_SHARP_S)
+
+/* à */
+#define FR_A_GRAVE (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION))
+#define FR_AGRV (FR_A_GRAVE)
+
+/* æ */
+#define FR_AE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))
+
+/* ç */
+#define FR_C_CEDILLA (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_C)))
+#define FR_CCED (FR_C_CEDILLA)
+
+/* è */
+#define FR_E_GRAVE (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_3_AND_HASH))
+#define FR_EGRV (FR_E_GRAVE)
+
+/* é */
+#define FR_E_ACUTE (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT))
+#define FR_EACU (FR_E_ACUTE)
+
+/* ê */
+#define FR_E_CIRCUMFLEX (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_4_AND_DOLLAR))
+#define FR_ECIR (FR_E_CIRCUMFLEX)
+
+/* ÷ */
+#define FR_DIVISION (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE)))
+#define FR_DIV (FR_DIVISION)
+
+/* ù */
+#define FR_U_GRAVE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_U)))
+#define FR_UGRV (FR_U_GRAVE)
+
+/* œ */
+#define FR_OE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_O)))
+
+/* ʒ */
+#define FR_EZH (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Z)))
+
+/* ˇ (dead) */
+#define FR_CARON (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_EQUAL_AND_PLUS)))
+#define FR_CARN (FR_CARON)
+
+/* ˍ (dead) */
+#define FR_MACRON_BELOW (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_H))))
+#define FR_MACB (FR_MACRON_BELOW)
+
+/* ˘ (dead) */
+#define FR_BREVE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE)))
+#define FR_BREV (FR_BREVE)
+
+/* ˙ (dead) */
+#define FR_DOT_ABOVE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_I)))
+#define FR_DOTA (FR_DOT_ABOVE)
+
+/* ˚ (dead) */
+#define FR_RING_ABOVE (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE))))
+#define FR_RNGA (FR_RING_ABOVE)
+
+/* ˛ (dead) */
+#define FR_OGONEK (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_V))))
+#define FR_OGON (FR_OGONEK)
+
+/* ˝ (dead) */
+#define FR_DOUBLE_ACUTE (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT))))
+#define FR_DACU (FR_DOUBLE_ACUTE)
+
+/* ̏ (dead) */
+#define FR_DOUBLE_GRAVE (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_6_AND_CARET))))
+#define FR_DGRV (FR_DOUBLE_GRAVE)
+
+/* ̑ (dead) */
+#define FR_INVERTED_BREVE (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE))))
+#define FR_IBRV (FR_INVERTED_BREVE)
+
+/* ̣ (dead) */
+#define FR_DOT_BELOW (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_I))))
+#define FR_DOTB (FR_DOT_BELOW)
+
+/* ̦ (dead) */
+#define FR_COMMA_BELOW (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))))
+#define FR_DCMM (FR_COMMA_BELOW)
+
+/* θ */
+#define FR_THETA (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_A)))
+#define FR_THET (FR_THETA)
+
+/* ' */
+#define FR_LEFT_SINGLE_QUOTATION (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND))
+#define FR_LSQU (FR_LEFT_SINGLE_QUOTATION)
+
+/* ' */
+#define FR_RIGHT_SINGLE_QUOTATION (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK))
+#define FR_RSQU (FR_RIGHT_SINGLE_QUOTATION)
+
+/* " */
+#define FR_LEFT_DOUBLE_QUOTATION (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))
+#define FR_LDQU (FR_LEFT_DOUBLE_QUOTATION)
+
+/* " */
+#define FR_RIGHT_DOUBLE_QUOTATION (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))
+#define FR_RDQU (FR_RIGHT_DOUBLE_QUOTATION)
+
+/* ‑ (non-breaking hyphen) */
+#define FR_NON_BREAKING_HYPHEN (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE))))
+#define FR_NBHY (FR_NON_BREAKING_HYPHEN)
+
+/* – */
+#define FR_EN_DASH (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE)))
+#define FR_NDSH (FR_EN_DASH)
+
+/* — */
+#define FR_EM_DASH (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK))))
+#define FR_MDSH (FR_EM_DASH)
+
+/* † */
+#define FR_DAGGER (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE)))
+#define FR_DAGG (FR_DAGGER)
+
+/* ‡ */
+#define FR_DOUBLE_DAGGER (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))))
+#define FR_DDAG (FR_DOUBLE_DAGGER)
+
+/* … */
+#define FR_ELLIPSIS (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))
+#define FR_ELLP (FR_ELLIPSIS)
+
+/* ‰ */
+#define FR_PER_MILLE (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_P))))
+#define FR_PERM (FR_PER_MILLE)
+
+/* ‹ */
+#define FR_LEFT_SINGLE_GUILLEMET (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS))))
+#define FR_LSAQ (FR_LEFT_SINGLE_GUILLEMET)
+
+/* › */
+#define FR_RIGHT_SINGLE_GUILLEMET (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS))))
+#define FR_RSAQ (FR_RIGHT_SINGLE_GUILLEMET)
+
+/* € */
+#define FR_EURO (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_E)))
+
+/* ™ */
+#define FR_TRADEMARK (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_T))))
+#define FR_TM (FR_TRADEMARK)
+
+/* − (minus sign) */
+#define FR_MINUS_SIGN (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE)))
+#define FR_MMNS (FR_MINUS_SIGN)
+
+/* − (dead minus) */
+#define FR_DEAD_MINUS (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_B)))
+#define FR_DMNS (FR_DEAD_MINUS)
+
+/* ∕ (dead) */
+#define FR_DIVISION_SLASH (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_K)))
+#define FR_DSLS (FR_DIVISION_SLASH)
+
+/* √ */
+#define FR_SQUARE_ROOT (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE))))
+#define FR_SQRT (FR_SQUARE_ROOT)
+
+/* ∞ */
+#define FR_INFINITY (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON)))
+#define FR_INFN (FR_INFINITY)
+
+/* ≃ */
+#define FR_ASYMPTOTICALLY_EQUAL (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK)))
+#define FR_AEQL (FR_ASYMPTOTICALLY_EQUAL)
+
+/* ≠ */
+#define FR_NOT_EQUAL (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK))))
+#define FR_NEQL (FR_NOT_EQUAL)
+
+/* ≤ */
+#define FR_LESS_THAN_OR_EQUAL (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))
+#define FR_LEQL (FR_LESS_THAN_OR_EQUAL)
+
+/* ≥ */
+#define FR_GREATER_THAN_OR_EQUAL (LS(RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))))
+#define FR_GEQL (FR_GREATER_THAN_OR_EQUAL)
+
+/* Eu (dead European symbol) */
+#define FR_DEAD_EUROPEAN (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_H)))
+#define FR_EU (FR_DEAD_EUROPEAN)
