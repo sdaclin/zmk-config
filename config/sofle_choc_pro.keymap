@@ -85,10 +85,10 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans      &trans      &trans            &trans             &kp PRINTSCREEN                     &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans      &trans      &kp LG(LA(LEFT))  &kp LG(LA(RIGHT))  &trans           &kp PG_UP                  &kp HOME  &kp UP    &kp END    &trans  &trans
-&trans  &kp K_PREV  &kp K_NEXT  &kt LG(TAB)       &kt TAB            &trans           &kp PG_DN                  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &kp K_UNDO  &kp K_CUT   &kp K_COPY        &kp K_PASTE        &trans           &trans     &trans  &trans  &trans    &trans    &trans     &trans  &trans
+&trans  &trans      &trans      &trans            &trans             &kp PRINTSCREEN                     &trans  &trans    &trans    &trans     &trans         &trans
+&trans  &trans      &trans      &kp LG(LA(LEFT))  &kp LG(LA(RIGHT))  &trans           &kp PG_UP                  &kp HOME  &kp UP    &kp END    &trans         &trans
+&trans  &kp K_PREV  &kp K_NEXT  &kt LS(TAB)       &kt TAB            &trans           &kp PG_DN                  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RIGHT_ALT  &trans
+&trans  &kp K_UNDO  &kp K_CUT   &kp K_COPY        &kp K_PASTE        &trans           &trans     &trans  &trans  &trans    &trans    &trans     &kp LEFT_GUI   &trans
                     &trans      &trans            &trans             &trans           &trans     &trans  &trans  &trans    &trans    &trans
             >;
 
