@@ -83,9 +83,9 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans      &trans     &trans       &trans                  &trans                                &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &kp INS     &kp PSCRN  &kp K_CMENU  &kp LG(LA(LEFT_ARROW))  &kp LG(LA(RIGHT))  &kp PG_UP                  &kp HOME  &kp UP    &kp END    &trans  &trans
-&trans  &trans      &trans     &trans       &trans                  &kp CLCK           &kp PG_DN                  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans      &trans     &trans       &trans                  &kp PRINTSCREEN                       &trans  &trans    &trans    &trans     &trans  &trans
+&trans  &trans      &trans     &trans       &kp LG(LA(LEFT_ARROW))  &kp LG(LA(RIGHT))  &kp PG_UP                  &kp HOME  &kp UP    &kp END    &trans  &trans
+&trans  &trans      &trans     &kp LG(TAB)  &kt LA(TAB)             &trans             &kp PG_DN                  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
 &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE             &trans             &trans     &trans  &trans  &trans    &trans    &trans     &trans  &trans
                     &trans     &trans       &trans                  &trans             &trans     &trans  &trans  &trans    &trans    &trans
             >;
