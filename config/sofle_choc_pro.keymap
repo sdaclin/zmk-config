@@ -68,7 +68,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "GREATER";
             #binding-cells = <0>;
-            bindings = <&kp FR_GT>, <&kp FR_LT>;
+            bindings = <&kp FR_LT>, <&kp FR_GT>;
 
             tapping-term-ms = <300>;
         };
