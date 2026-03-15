@@ -77,7 +77,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MINUS";
             #binding-cells = <0>;
-            bindings = <&kt FR_MINUS>, <&kp FR_UNDER>;
+            bindings = <&kp FR_MINUS>, <&kp FR_UNDER>;
         };
 
         parenthesis: parenthesis {
