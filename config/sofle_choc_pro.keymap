@@ -33,7 +33,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "QUOTE";
             #binding-cells = <0>;
-            bindings = <&kp FR_SQT>, <&kt FR_DQT>, <&kp FR_GRAVE>;
+            bindings = <&kp FR_SQT>, <&kp FR_DQT>, <&kp FR_GRAVE>;
 
             tapping-term-ms = <300>;
         };
