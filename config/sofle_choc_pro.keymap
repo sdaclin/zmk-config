@@ -34,6 +34,8 @@
             label = "QUOTE";
             #binding-cells = <0>;
             bindings = <&kp FR_SQT>, <&kt FR_DQT>, <&kp FR_GRAVE>;
+
+            tapping-term-ms = <300>;
         };
 
         dot: dot {
@@ -41,6 +43,8 @@
             label = "DOT";
             #binding-cells = <0>;
             bindings = <&kp FR_DOT>, <&kp FR_EXCL>, <&kp FR_QUESTION>;
+
+            tapping-term-ms = <300>;
         };
 
         comma: comma {
@@ -48,6 +52,8 @@
             label = "COMMA";
             #binding-cells = <0>;
             bindings = <&kp FR_COMMA>, <&kp FR_SEMI>, <&kp FR_COLON>;
+
+            tapping-term-ms = <300>;
         };
 
         slash: slash {
@@ -62,6 +68,8 @@
             label = "AROBASE";
             #binding-cells = <0>;
             bindings = <&kp FR_AT>, <&kp FR_HASH>, <&kp FR_TILDE>;
+
+            tapping-term-ms = <300>;
         };
 
         greater: greater {
@@ -78,6 +86,8 @@
             label = "MINUS";
             #binding-cells = <0>;
             bindings = <&kp FR_MINUS>, <&kp FR_UNDER>;
+
+            tapping-term-ms = <300>;
         };
 
         parenthesis: parenthesis {
@@ -85,6 +95,8 @@
             label = "PARENTHESIS";
             #binding-cells = <0>;
             bindings = <&kp FR_LPAR>, <&kp FR_RPAR>;
+
+            tapping-term-ms = <300>;
         };
 
         squareBrackets: squareBrackets {
@@ -92,6 +104,8 @@
             label = "SQUAREBRACKETS";
             #binding-cells = <0>;
             bindings = <&kp FR_LBKT>, <&kp FR_RBKT>;
+
+            tapping-term-ms = <300>;
         };
 
         curlyBrackets: curlyBrackets {
@@ -99,6 +113,17 @@
             label = "CURLYBRACKETS";
             #binding-cells = <0>;
             bindings = <&kp FR_LBRC>, <&kp FR_RBRC>;
+
+            tapping-term-ms = <300>;
+        };
+
+        equalsandor: equalsandor {
+            compatible = "zmk,behavior-tap-dance";
+            label = "EQUALSANDOR";
+            #binding-cells = <0>;
+            bindings = <&kp FR_EQUAL>, <&kp FR_AMPS>, <&kp FR_PIPE>;
+
+            tapping-term-ms = <300>;
         };
     };
 
@@ -119,7 +144,7 @@
 &kp ESC     &kp FR_A_GRAVE  &kp FR_E_ACUTE  &kp FR_E_GRAVE  &kp FR_CARET  &quote                            &arobase   &minus     &parenthesis  &squareBrackets  &curlyBrackets  &kp DEL
 &kp TAB     &kp FR_A        &kp FR_Z        &kp E           &kp R         &kp T      &kp Y                             &kp U      &kp I         &kp O            &kp P           &kp BSPC
 &kp LSHIFT  &kp FR_Q        &kp S           &kp D           &kp F         &kp G      &kp H                             &kp J      &kp K         &kp L            &kp FR_M        &kp RSHIFT
-&none       &kp FR_W        &kp X           &kp C           &kp V         &kp B      &kp C_PLAY  &none      &kp N      &comma     &dot          &kp DOT          &slash          &greater
+&none       &kp FR_W        &kp X           &kp C           &kp V         &kp B      &kp C_PLAY  &none      &kp N      &comma     &dot          &equalsandor     &slash          &greater
                             &kp LGUI        &kp LALT        &kp LCTRL     &mo LOWER  &kp RET     &kp SPACE  &mo RAISE  &kp RCTRL  &kp RALT      &kp RGUI
             >;
 
