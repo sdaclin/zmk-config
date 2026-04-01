@@ -136,6 +136,13 @@
             bindings = <&kp FR_CARET &kp FR_E>;
             label = "EACIRC";
         };
+
+        ocirc: ocirc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FR_CARET &kp FR_O>;
+            label = "OCIRC";
+        };
     };
 
     combos {
@@ -175,6 +182,11 @@
             bindings = <&kp FR_A_GRAVE>;
             key-positions = <13 14>;
         };
+
+        oacirc {
+            bindings = <&ocirc>;
+            key-positions = <22 20>;
+        };
     };
 
     keymap {
@@ -212,11 +224,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3                   &kp F4                    &kp F5                              &kp F6        &kp F7     &kp F8     &kp F9     &kp F10       &kp F11
-&trans  &trans  &trans  &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET      &trans         &kp FR_HASH                        &kp FR_N7  &kp FR_N8  &kp FR_N9  &none         &kp BACKSPACE
-&trans  &trans  &trans  &kp FR_LEFT_PARENTHESIS  &kp FR_RIGHT_PARENTHESIS  &kp LC(SLASH)  &kp FR_N0                          &kp FR_N4  &kp FR_N5  &kp FR_N6  &kp FR_PLUS   &kp FR_MINUS
-&trans  &trans  &trans  &kp FR_LEFT_BRACE        &kp FR_RIGHT_BRACE        &trans         &trans       &trans  &kp FR_EQUAL  &kp FR_N1  &kp FR_N2  &kp FR_N3  &kp FR_ASTRK  &kp FR_SLASH
-                &trans  &trans                   &trans                    &trans         &trans       &trans  &trans        &trans     &trans     &trans
+&trans  &kp F1        &kp F2                &kp F3                   &kp F4                    &kp F5                                 &kp F6        &kp F7     &kp F8     &kp F9     &kp F10         &kp F11
+&trans  &trans        &trans                &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET      &kp LC(FR_SLASH)  &kp FR_HASH                        &kp FR_N7  &kp FR_N8  &kp FR_N9  &kp FR_PERCENT  &kp BACKSPACE
+&trans  &kp FR_EQUAL  &kp FR_DOUBLE_QUOTES  &kp FR_LEFT_PARENTHESIS  &kp FR_RIGHT_PARENTHESIS  &kp LC(ENTER)     &kp FR_N0                          &kp FR_N4  &kp FR_N5  &kp FR_N6  &kp FR_PLUS     &kp FR_MINUS
+&trans  &trans        &trans                &kp FR_LEFT_BRACE        &kp FR_RIGHT_BRACE        &kp FR_SEMI       &trans       &trans  &kp FR_EQUAL  &kp FR_N1  &kp FR_N2  &kp FR_N3  &kp FR_ASTRK    &kp FR_SLASH
+                      &trans                &trans                   &trans                    &trans            &trans       &trans  &trans        &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
