@@ -203,10 +203,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC     &kp LG(FR_A)  &kp LG(FR_Z)  &kp LG(FR_E)  &kp LG(FR_R)  &quote                            &arobase   &minus        &kp FR_EQUAL  &andor        &none     &kp DEL
-&kp TAB     &kp FR_A      &kp FR_Z      &kp E         &kp R         &kp T      &kp Y                             &kp U         &kp I         &kp O         &kp P     &kp BSPC
-&kp LSHIFT  &kp FR_Q      &kp S         &kp D         &kp F         &kp G      &kp H                             &kp J         &kp K         &kp L         &kp FR_M  &kp RSHIFT
-&none       &kp FR_W      &kp X         &kp C         &kp V         &kp B      &kp C_PLAY  &none      &kp N      &kp FR_COMMA  &dot          &exclamation  &slash    &greater
+&kp ESC     &kp LG(FR_A)  &kp LG(FR_Z)  &kp LG(FR_E)  &kp LG(FR_R)  &quote                            &arobase   &minus        &kp FR_EQUAL  &andor        &kp FR_CARET  &kp DEL
+&kp TAB     &kp FR_A      &kp FR_Z      &kp E         &kp R         &kp T      &kp Y                             &kp U         &kp I         &kp O         &kp P         &kp BSPC
+&kp LSHIFT  &kp FR_Q      &kp S         &kp D         &kp F         &kp G      &kp H                             &kp J         &kp K         &kp L         &kp FR_M      &kp RSHIFT
+&none       &kp FR_W      &kp X         &kp C         &kp V         &kp B      &kp C_PLAY  &none      &kp N      &kp FR_COMMA  &dot          &exclamation  &slash        &greater
                           &kp LGUI      &kp LALT      &kp LCTRL     &mo LOWER  &kp RET     &kp SPACE  &mo RAISE  &kp RCTRL     &kp RALT      &kp RGUI
             >;
 
